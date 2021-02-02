@@ -19,10 +19,9 @@ from blog.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-	path('', include('blog.urls')),
+    path('todo/',include('todo.urls')), 
+	path('', include('blog.urls')),    
     
-    path(r'todo/',index,name='todo'),
-    path(r'tags/',index,name='tags'),
 ]
  
  

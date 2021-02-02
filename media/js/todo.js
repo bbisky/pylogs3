@@ -1,24 +1,49 @@
 $(document).ready(function(){  
-  $("a[@class=a_add_task]").click(
+  $("a[class=a_add_task]").click(
     function(){
         $(this).hide();
         $(this).parent("li").children("div").fadeIn('slow');
     }
   );
-  $("input[@name=btn_add_task]").click(function(){add_task(this)});
-  $("input[@name=btn_add_project]").click(function(){add_project(this)});
-  $("input[@name=cbx_done_task]").change(function(){done_task(this)});
-  $("a[@name=a_del_task]").click(function(){del_task(this)});
-  $("a[@name=a_undone_task]").click(function(){undone_task(this)});
-  $("a[@name=a_del_project]").click(function(){del_project(this)});
-  $("a[@name=a_project_type]").click(function(){chg_project_type(this)});
+  $("input[name=btn_add_task]").click(function(){add_task(this)});
+  $("input[name=btn_add_project]").click(function(){add_project(this)});
+  $("input[name=cbx_done_task]").change(function(){done_task(this)});
+  $("a[name=a_del_task]").click(function(){del_task(this)});
+  $("a[name=a_undone_task]").click(function(){undone_task(this)});
+  $("a[name=a_del_project]").click(function(){del_project(this)});
+  $("a[name=a_project_type]").click(function(){chg_project_type(this)});
 });
 
+function getCookie(name) {
+  let cookieValue = null;
+  if (document.cookie && document.cookie !== '') {
+      const cookies = document.cookie.split(';');
+      for (let i = 0; i < cookies.length; i++) {
+          const cookie = cookies[i].trim();
+          // Does this cookie string begin with the name we want?
+          if (cookie.substring(0, name.length + 1) === (name + '=')) {
+              cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+              break;
+          }
+      }
+  }
+  return cookieValue;
+}
+const csrftoken = getCookie('csrftoken');
+function post(url, data, func){
+  $.ajax({
+    url: url,
+    data: data,
+    success: func,
+    type: 'POST',
+    headers: {"X-CSRFToken": csrftoken }
+  })
+}
 function add_task(ev)
 {
     var li =$(ev).parent("div");    
-    var pid = li.children("input[@name=pid]");    
-    var task_name = li.children("input[@name=task_name]");
+    var pid = li.children("input[name=pid]");    
+    var task_name = li.children("input[name=task_name]");
     if(!task_name)
         alert('error');
     if (task_name && task_name.val() == "")
@@ -26,9 +51,9 @@ function add_task(ev)
         task_name.addClass('required');
         return;
     }    
-    var priority = li.children("select[@name=priority]")
+    var priority = li.children("select[name=priority]")
     //alert('pid:'+pid.val() + 'task_name:'+task_name.val() +'priority:' + priority.val());
-    $.post('/todo/task/add/',
+    post('/todo/task/add/',
            {pid:pid.val(),task_name:task_name.val(), priority:priority.val()},
            function(ret){
                 if(ret == 'success')
@@ -45,15 +70,15 @@ function add_task(ev)
 
 function add_project(ev){
     var li =$(ev).parent("li");
-    var p_name = li.children("input[@name=project_name]");
-    var p_type = li.children("input[@name=project_type]");
+    var p_name = li.children("input[name=project_name]");
+    var p_type = li.children("input[name=project_type]");
     if (p_name && p_name.val() == '')
     {
         p_name.addClass('required');
         return;
     }
-    $.post('/todo/project/add/',
-           {project_name:p_name.val(),project_type:p_type.attr("checked")?1:0},
+    post('/todo/project/add/',
+           {project_name:p_name.val(),project_type:p_type.prop("checked")?1:0},
            function(ret){
                 if(ret == 'success')
                 {
@@ -68,9 +93,9 @@ function add_project(ev){
 
 function done_task(obj){
   obj = $(obj);
-  if(obj.attr("checked"))
+  if(obj.prop("checked"))
   {
-    $.post('/todo/task/done/',
+    post('/todo/task/done/',
            {task_id:obj.val()},
            function(ret){
                 if(ret == 'success')
@@ -88,7 +113,7 @@ function del_task(obj){
   obj = $(obj);
   if(confirm('你真的要删除该task吗？'))
   {
-    $.post('/todo/task/delete/',
+    post('/todo/task/delete/',
            {task_id:obj.attr('rel')},
            function(ret){
                 if(ret == 'success')
@@ -104,7 +129,7 @@ function del_task(obj){
 //undone task
 function undone_task(obj){
   obj = $(obj);
-  $.post('/todo/task/undone/',
+  post('/todo/task/undone/',
            {task_id:obj.attr('rel')},
            function(ret){
                 if(ret == 'success')
@@ -121,7 +146,7 @@ function del_project(obj){
   obj = $(obj);
   if(confirm('你真的要删除该项目及项目下的所有任务吗？'))
   {
-    $.post('/todo/project/delete/',
+    post('/todo/project/delete/',
            {project_id:obj.attr('rel')},
            function(ret){
                 if(ret == 'success')
@@ -142,7 +167,7 @@ function chg_project_type(obj){
     msg = '私有'    
    if(confirm('你真的要修改该项目为'+msg+'项目吗？'))
   {
-    $.post('/todo/project/change_type/',
+    post('/todo/project/change_type/',
            {project_id:obj.attr('rel')},
            function(ret){
                 if(ret == 'success')

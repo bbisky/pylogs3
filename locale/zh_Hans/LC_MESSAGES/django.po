@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pylogs 1.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-02 19:55+0800\n"
-"PO-Revision-Date: 2021-02-02 20:27+0800\n"
+"POT-Creation-Date: 2021-02-02 22:34+0800\n"
+"PO-Revision-Date: 2021-02-02 22:35+0800\n"
 "Last-Translator: Sky <denghaibo@gmail.com>\n"
 "Language-Team: Sky <denghaibo@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -361,11 +361,11 @@ msgstr "站点设置"
 msgid "Home"
 msgstr "首页"
 
-#: .\blog\views.py:224
+#: .\blog\views.py:225
 msgid "The confirmation code you entered was incorrect!"
 msgstr "您输入的验证码不正确！"
 
-#: .\blog\views.py:250
+#: .\blog\views.py:251
 msgid "Comment post successful!"
 msgstr "评论发表成功，可能需要等待管理员审核！"
 
@@ -385,7 +385,7 @@ msgstr "请纠正以下错误"
 msgid "Leave You Comment"
 msgstr "评论这篇文章"
 
-#: .\templates\blog\comment_form.html:38
+#: .\templates\blog\comment_form.html:36
 msgid "Submit Comment"
 msgstr "发表评论"
 
@@ -532,52 +532,64 @@ msgstr "热门文章"
 msgid "Projects in progress"
 msgstr "进行中的项目"
 
-#: .\templates\todo\index.html:14 .\templates\todo\index.html:57
+#: .\templates\todo\index.html:14 .\templates\todo\index.html:76
 msgid "Created at"
 msgstr "创建于"
 
-#: .\templates\todo\index.html:15 .\templates\todo\index.html:58
+#: .\templates\todo\index.html:14
+msgid "ago"
+msgstr "之前"
+
+#: .\templates\todo\index.html:16 .\templates\todo\index.html:35
+msgid "delete"
+msgstr "删除"
+
+#: .\templates\todo\index.html:19 .\templates\todo\index.html:80
 msgid "Public Project"
 msgstr "公共项目"
 
-#: .\templates\todo\index.html:15 .\templates\todo\index.html:44
-#: .\templates\todo\index.html:58
+#: .\templates\todo\index.html:21 .\templates\todo\index.html:62
+#: .\templates\todo\index.html:80
 msgid "Private Project"
 msgstr "私有项目"
 
-#: .\templates\todo\index.html:19
+#: .\templates\todo\index.html:30
 msgid "This task is completed."
 msgstr "这个任务已完成"
 
-#: .\templates\todo\index.html:19 .\templates\todo\index.html:28
+#: .\templates\todo\index.html:32 .\templates\todo\index.html:45
 msgid "Priority"
 msgstr "优先级"
 
-#: .\templates\todo\index.html:25
+#: .\templates\todo\index.html:36
+msgid "undone"
+msgstr "未完成"
+
+#: .\templates\todo\index.html:42
 msgid "Add New Task"
 msgstr "添加新任务"
 
-#: .\templates\todo\index.html:29
+#: .\templates\todo\index.html:46
 msgid "low"
 msgstr "低"
 
-#: .\templates\todo\index.html:30
+#: .\templates\todo\index.html:47
 msgid "medium"
 msgstr "中"
 
-#: .\templates\todo\index.html:31
+#: .\templates\todo\index.html:48
 msgid "high"
 msgstr "高"
 
-#: .\templates\todo\index.html:42
+#: .\templates\todo\index.html:60
 msgid "Add New Project"
 msgstr "添加新项目"
 
-#: .\templates\todo\index.html:52
+#: .\templates\todo\index.html:71
 msgid "Completed Projects"
 msgstr "完成的项目"
 
-#: .\templates\todo\index.html:71
+#: .\templates\todo\index.html:97
 msgid "No project is completed!"
 msgstr "没有已完成的项目"
 
@@ -593,6 +605,70 @@ msgstr "下一页"
 msgid "No related post now"
 msgstr "暂时没有文章"
 
+#: .\todo\models.py:18
+msgid "Project Name"
+msgstr "项目名称"
+
+#: .\todo\models.py:19 .\todo\models.py:42
+msgid "Created Date"
+msgstr "建立日期"
+
+#: .\todo\models.py:20 .\todo\models.py:43
+msgid "LastUpdated Date"
+msgstr "最后更新日期"
+
+#: .\todo\models.py:21
+msgid "Project type"
+msgstr "项目类别"
+
+#: .\todo\models.py:22
+msgid "Project Description"
+msgstr "项目描述"
+
+#: .\todo\models.py:23
+msgid "Project task count"
+msgstr "项目任务数"
+
+#: .\todo\models.py:24
+msgid "Completed task count"
+msgstr "完成的任务数"
+
+#: .\todo\models.py:25
+msgid "Project slug"
+msgstr "项目别名"
+
+#: .\todo\models.py:31
+msgid "Todo Project"
+msgstr "Todo项目"
+
+#: .\todo\models.py:32
+msgid "Todo Projects"
+msgstr "Todo项目"
+
+#: .\todo\models.py:39
+msgid "Task Name"
+msgstr "项目名称"
+
+#: .\todo\models.py:40
+msgid "Task Project"
+msgstr "任务所在项目"
+
+#: .\todo\models.py:44
+msgid "Task Priority"
+msgstr "任务优先级"
+
+#: .\todo\models.py:45
+msgid "Is task completed"
+msgstr "任务完成状态"
+
+#: .\todo\models.py:52
+msgid "Todo Task"
+msgstr "Todo任务"
+
+#: .\todo\models.py:53
+msgid "Todo Tasks"
+msgstr "Todo任务"
+
 #~ msgid "No post now"
 #~ msgstr "暂时没有文章"
 
@@ -604,54 +680,6 @@ msgstr "暂时没有文章"
 
 #~ msgid "Sorry,create directory failed!"
 #~ msgstr "对不起，创建目录失败！"
-
-#~ msgid "Project Name"
-#~ msgstr "项目名称"
-
-#~ msgid "Created Date"
-#~ msgstr "建立日期"
-
-#~ msgid "LastUpdated Date"
-#~ msgstr "最后更新日期"
-
-#~ msgid "Project type"
-#~ msgstr "项目类别"
-
-#~ msgid "Project Description"
-#~ msgstr "项目描述"
-
-#~ msgid "Project task count"
-#~ msgstr "项目任务数"
-
-#~ msgid "Completed task count"
-#~ msgstr "完成的任务数"
-
-#~ msgid "Project slug"
-#~ msgstr "项目别名"
-
-#~ msgid "Todo Project"
-#~ msgstr "Todo项目"
-
-#~ msgid "Todo Projects"
-#~ msgstr "Todo项目"
-
-#~ msgid "Task Name"
-#~ msgstr "项目名称"
-
-#~ msgid "Task Project"
-#~ msgstr "任务所在项目"
-
-#~ msgid "Task Priority"
-#~ msgstr "任务优先级"
-
-#~ msgid "Is task completed"
-#~ msgstr "任务完成状态"
-
-#~ msgid "Todo Task"
-#~ msgstr "Todo任务"
-
-#~ msgid "Todo Tasks"
-#~ msgstr "Todo任务"
 
 #~ msgid "Pylogs: Latest Posts"
 #~ msgstr "Pylogs:最新文章"
