@@ -1,17 +1,16 @@
 Pylogs README
 
-Pylogs是一个基于Python和Django开发的个人blog系统（至少暂时是这样:)）.
+Pylogs是一个基于Python和Django开发的个人blog系统,10+年前的项目,最近要用,发现什么都变了，所以升级了一下,支持python3 和Django3.
 本系统实现了blog的基本功能。支持皮肤，tag等blog的特性。并且集成了一个todo项目，用来管理你的待办事项。
 
-作者:Sky (denghaibo+pylogs@gmail.com)
-Pylogs项目主页:   		http://code.google.com/p/pylogs/
-Pylogs项目主页(Git):	http://github.com/bbisky/Pylogs
+作者:Sky (denghaibo+pylogs@gmail.com) 
+Pylogs项目主页(Git):	http://github.com/bbisky/pylogs3
 Pylogs讨论组:     		http://groups.google.com/group/pylogs
 Pylogs官方演示:   		http://oteam.cn
 
 = Requirements =
-  * Python 2.5.2                       http://www.python.org
-  * Django v1.1                        http://www.djangoproject.org
+  * Python v3.9.0                       http://www.python.org
+  * Django v3.1.6                        http://www.djangoproject.org
   * PIL(Python Imaging Library 1.1.6)  http://www.pythonware.com/products/pil/
   * jQuery 1.2.3                       http://jquery.com
 
@@ -34,4 +33,4 @@ Pylogs官方演示:   		http://oteam.cn
 ||SiteKeywords          ||站点关键字(对应head中的meta keywords)   ||
 ||SiteDescription       ||站点描述(对应head中的meta description)  ||
 
-如果你在安装过程中遇到问题，请到http://groups.google.com/group/pylogs中提出。
+如果你在安装过程中遇到问题，请到https://github.com/bbisky/pylogs3/issues中提出。
