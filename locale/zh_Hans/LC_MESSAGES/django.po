@@ -1,0 +1,663 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Pylogs 1.12\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-02-02 19:55+0800\n"
+"PO-Revision-Date: 2021-02-02 20:27+0800\n"
+"Last-Translator: Sky <denghaibo@gmail.com>\n"
+"Language-Team: Sky <denghaibo@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 2.2.2\n"
+
+#: .\blog\admin.py:78
+msgid "1 comment was"
+msgstr "1条评论"
+
+#: .\blog\admin.py:80
+#, python-format
+msgid "%s comments were"
+msgstr "%s条评论"
+
+#: .\blog\admin.py:81
+#, python-format
+msgid "%s successfully marked as approved."
+msgstr "%s 被成功标记为审核通过."
+
+#: .\blog\admin.py:82
+msgid "Mark selected comments as approved"
+msgstr "审核通过所有选中的评论"
+
+#: .\blog\admin.py:109
+#, python-format
+msgid "Theme must be one of %s"
+msgstr "主题名必须为%s中的一个"
+
+#: .\blog\models.py:11 .\blog\models.py:189 .\blog\models.py:194
+msgid "Post"
+msgstr "文章"
+
+#: .\blog\models.py:12
+msgid "Page"
+msgstr "页面"
+
+#: .\blog\models.py:16
+msgid "Published"
+msgstr "已发布"
+
+#: .\blog\models.py:17
+msgid "Draft"
+msgstr "草稿"
+
+#: .\blog\models.py:18
+msgid "Private"
+msgstr "私人"
+
+#: .\blog\models.py:22
+msgid "UnApproved"
+msgstr "未审核"
+
+#: .\blog\models.py:23
+msgid "Approved"
+msgstr "已审核"
+
+#: .\blog\models.py:24
+msgid "Spam"
+msgstr "垃圾"
+
+#: .\blog\models.py:28
+msgid "Allow Comments"
+msgstr "允许评论"
+
+#: .\blog\models.py:29
+msgid "Disallow Comments"
+msgstr "不允许评论"
+
+#: .\blog\models.py:30
+msgid "Allow Register Comments"
+msgstr "只允许注册用户评论"
+
+#: .\blog\models.py:31
+msgid "No Need Approve"
+msgstr "评论不需审批"
+
+#: .\blog\models.py:36
+msgid "HTML"
+msgstr ""
+
+#: .\blog\models.py:37
+msgid "MARKDOWN"
+msgstr ""
+
+#: .\blog\models.py:41
+msgid "SiteName"
+msgstr "站点名称"
+
+#: .\blog\models.py:42
+msgid "SiteSubTitle"
+msgstr "站点副标题"
+
+#: .\blog\models.py:43
+msgid "SiteKeywords"
+msgstr "站点关键字"
+
+#: .\blog\models.py:44
+msgid "SiteDescription"
+msgstr "站点描述"
+
+#: .\blog\models.py:45
+msgid "Theme"
+msgstr "主题"
+
+#: .\blog\models.py:46
+msgid "AuthorName"
+msgstr "作者名称"
+
+#: .\blog\models.py:51 .\blog\models.py:80
+#: .\templates\filemanager\index.html:42
+msgid "Name"
+msgstr "名称"
+
+#: .\blog\models.py:52
+msgid "Slug"
+msgstr "简称"
+
+#: .\blog\models.py:53 .\blog\models.py:83 .\blog\models.py:116
+msgid "Use as url"
+msgstr "作为链接使用"
+
+#: .\blog\models.py:54
+msgid "Reference count"
+msgstr "引用次数"
+
+#: .\blog\models.py:75
+msgid "Tag"
+msgstr "标签"
+
+#: .\blog\models.py:76 .\blog\models.py:134 .\templates\blog\tags\menu.html:4
+#: .\templates\themes\beijing2008\blog\page.html:17
+#: .\templates\themes\beijing2008\blog\post.html:17
+#: .\templates\themes\beijing2008\blog\tags.html:3
+#: .\templates\themes\beijing2008\blog\tags.html:9
+#: .\templates\themes\default\blog\page.html:22
+#: .\templates\themes\default\blog\post.html:30
+#: .\templates\themes\default\blog\tags.html:3
+#: .\templates\themes\default\blog\tags.html:8
+#: .\templates\themes\naver\blog\page.html:30
+#: .\templates\themes\naver\blog\post.html:30
+#: .\templates\themes\naver\blog\tags.html:3
+#: .\templates\themes\naver\blog\tags.html:6
+#: .\templates\themes\naver\blog\tags\menu.html:5
+#: .\templates\themes\techicon\blog\page.html:16
+#: .\templates\themes\techicon\blog\post.html:21
+#: .\templates\themes\techicon\blog\tags.html:3
+#: .\templates\themes\techicon\blog\tags.html:8 .\templates\wap\page.html:12
+#: .\templates\wap\post.html:13 .\templates\wap\tags.html:2
+#: .\templates\wap\tags.html:4 .\templates\wap\tags\menu.html:1
+msgid "Tags"
+msgstr "标签"
+
+#: .\blog\models.py:81 .\blog\models.py:235 .\blog\models.py:260
+msgid "Description"
+msgstr "描述"
+
+#: .\blog\models.py:82
+msgid "English name"
+msgstr "英文名"
+
+#: .\blog\models.py:104 .\blog\models.py:114
+msgid "Category"
+msgstr "分类"
+
+#: .\blog\models.py:105 .\templates\themes\beijing2008\base.html:101
+#: .\templates\themes\beijing2008\blog\page.html:13
+#: .\templates\themes\beijing2008\blog\post.html:13
+#: .\templates\themes\default\base.html:60
+#: .\templates\themes\default\blog\post.html:21
+#: .\templates\themes\naver\base.html:56
+#: .\templates\themes\naver\blog\page.html:21
+#: .\templates\themes\naver\blog\post.html:21
+#: .\templates\themes\techicon\base.html:98
+#: .\templates\themes\techicon\blog\post.html:14 .\templates\wap\page.html:5
+#: .\templates\wap\post.html:6
+msgid "Categories"
+msgstr "分类"
+
+#: .\blog\models.py:109 .\blog\models.py:234
+msgid "Title"
+msgstr "标题"
+
+#: .\blog\models.py:111
+msgid "Markup"
+msgstr "标记"
+
+#: .\blog\models.py:112 .\blog\models.py:204
+#: .\templates\blog\comment_form.html:31
+msgid "Content"
+msgstr "内容"
+
+#: .\blog\models.py:115
+msgid "Post name"
+msgstr "文章缩略名"
+
+#: .\blog\models.py:117
+msgid "Post type"
+msgstr "文章类别"
+
+#: .\blog\models.py:119
+msgid "Post status"
+msgstr "文章状态"
+
+#: .\blog\models.py:124
+msgid "Parent page"
+msgstr "上级页面"
+
+#: .\blog\models.py:126 .\blog\models.py:202 .\blog\models.py:241
+#: .\templates\themes\beijing2008\blog\list.html:12
+#: .\templates\themes\beijing2008\blog\page.html:22
+#: .\templates\themes\beijing2008\blog\post.html:22
+#: .\templates\themes\default\blog\list.html:12
+#: .\templates\themes\default\blog\page.html:20
+#: .\templates\themes\default\blog\post.html:20
+#: .\templates\themes\naver\blog\list.html:11
+#: .\templates\themes\naver\blog\page.html:20
+#: .\templates\themes\naver\blog\post.html:20
+#: .\templates\themes\techicon\blog\list.html:30
+#: .\templates\themes\techicon\blog\page.html:13
+#: .\templates\themes\techicon\blog\post.html:13 .\templates\wap\page.html:4
+#: .\templates\wap\post.html:5
+msgid "Pubdate"
+msgstr "发表时间"
+
+#: .\blog\models.py:127
+msgid "Hits"
+msgstr "点击"
+
+#: .\blog\models.py:128
+msgid "Menu order"
+msgstr "菜单排序"
+
+#: .\blog\models.py:129
+msgid "Comment status"
+msgstr "评论状态"
+
+#: .\blog\models.py:132
+msgid "Comment count"
+msgstr "评论数"
+
+#: .\blog\models.py:179
+msgid "Post categories"
+msgstr "文章类别"
+
+#: .\blog\models.py:190
+msgid "Posts"
+msgstr "文章"
+
+#: .\blog\models.py:197 .\templates\blog\comment_form.html:13
+msgid "Author"
+msgstr "作者"
+
+#: .\blog\models.py:198 .\templates\blog\comment_form.html:19
+msgid "Email"
+msgstr "Email"
+
+#: .\blog\models.py:199 .\blog\models.py:233
+#: .\templates\blog\comment_form.html:25
+msgid "URL"
+msgstr "URL"
+
+#: .\blog\models.py:200
+msgid "IP"
+msgstr "IP"
+
+#: .\blog\models.py:205
+msgid "Approve status"
+msgstr "审核状态"
+
+#: .\blog\models.py:207
+msgid "User agent info"
+msgstr "用户浏览器信息"
+
+#: .\blog\models.py:209
+msgid "UserId"
+msgstr "用户ID"
+
+#: .\blog\models.py:228
+msgid "Comment"
+msgstr "评论"
+
+#: .\blog\models.py:229 .\templates\themes\beijing2008\blog\list.html:11
+#: .\templates\themes\beijing2008\blog\page.html:14
+#: .\templates\themes\beijing2008\blog\page.html:30
+#: .\templates\themes\beijing2008\blog\post.html:14
+#: .\templates\themes\beijing2008\blog\post.html:32
+#: .\templates\themes\default\blog\list.html:21
+#: .\templates\themes\default\blog\page.html:41
+#: .\templates\themes\default\blog\post.html:48
+#: .\templates\themes\naver\blog\list.html:19
+#: .\templates\themes\naver\blog\page.html:26
+#: .\templates\themes\naver\blog\page.html:44
+#: .\templates\themes\naver\blog\post.html:26
+#: .\templates\themes\naver\blog\post.html:44
+#: .\templates\themes\techicon\blog\list.html:39
+#: .\templates\themes\techicon\blog\page.html:33
+#: .\templates\themes\techicon\blog\post.html:33
+#: .\templates\themes\techicon\blog\post.html:43 .\templates\wap\page.html:20
+#: .\templates\wap\page.html:24 .\templates\wap\post.html:22
+#: .\templates\wap\post.html:29
+msgid "Comments"
+msgstr "评论"
+
+#: .\blog\models.py:237
+msgid "Image"
+msgstr "图片"
+
+#: .\blog\models.py:239
+msgid "Order"
+msgstr "排序"
+
+#: .\blog\models.py:240
+msgid "Minimal at front"
+msgstr "值小的靠前"
+
+#: .\blog\models.py:252
+msgid "Link"
+msgstr "链接"
+
+#: .\blog\models.py:253 .\templates\themes\beijing2008\base.html:96
+#: .\templates\themes\default\base.html:87
+#: .\templates\themes\naver\base.html:66
+#: .\templates\themes\techicon\base.html:110
+msgid "Links"
+msgstr "链接"
+
+#: .\blog\models.py:258
+msgid "SettingName"
+msgstr "设置名称"
+
+#: .\blog\models.py:259
+msgid "SettingValue"
+msgstr "值"
+
+#: .\blog\models.py:267
+msgid "Setting"
+msgstr "站点设置"
+
+#: .\blog\models.py:268
+msgid "Settings"
+msgstr "站点设置"
+
+#: .\blog\views.py:37 .\templates\blog\tags\menu.html:2
+#: .\templates\themes\naver\blog\tags\menu.html:3
+#: .\templates\wap\tags\menu.html:1
+msgid "Home"
+msgstr "首页"
+
+#: .\blog\views.py:224
+msgid "The confirmation code you entered was incorrect!"
+msgstr "您输入的验证码不正确！"
+
+#: .\blog\views.py:250
+msgid "Comment post successful!"
+msgstr "评论发表成功，可能需要等待管理员审核！"
+
+#: .\templates\admin\base_site.html:3
+msgid "Pylogs site admin"
+msgstr "Pylogs 站点管理"
+
+#: .\templates\admin\base_site.html:5
+msgid "Pylogs administration"
+msgstr "Pylogs管理"
+
+#: .\templates\blog\comment_form.html:3
+msgid "Please correct the errors below"
+msgstr "请纠正以下错误"
+
+#: .\templates\blog\comment_form.html:9
+msgid "Leave You Comment"
+msgstr "评论这篇文章"
+
+#: .\templates\blog\comment_form.html:38
+msgid "Submit Comment"
+msgstr "发表评论"
+
+#: .\templates\blog\tags\archivelist.html:9
+msgid "No Archive Now"
+msgstr "暂时没有存档"
+
+#: .\templates\blog\tags\category.html:9
+msgid "No Category Now"
+msgstr "暂时没有分类"
+
+#: .\templates\blog\tags\links.html:9
+#: .\templates\blog\tags\recent_comments.html:8
+msgid "No Links Now"
+msgstr "暂时没有链接"
+
+#: .\templates\blog\tags\menu.html:3
+#: .\templates\themes\naver\blog\tags\menu.html:4
+msgid "Todo"
+msgstr "Todo"
+
+#: .\templates\blog\tags\recent_posts.html:7
+#: .\templates\blog\tags\related_posts.html:7
+msgid "No post yet."
+msgstr "暂时没有文章"
+
+#: .\templates\filemanager\index.html:21 .\templates\filemanager\index.html:82
+msgid "Django File Manager"
+msgstr "DFM文件管理员"
+
+#: .\templates\filemanager\index.html:23
+msgid "Upload a file"
+msgstr "上传文件"
+
+#: .\templates\filemanager\index.html:26
+msgid "Allow upload types"
+msgstr "允许上传文件类型"
+
+#: .\templates\filemanager\index.html:31
+msgid "Upload"
+msgstr "上传"
+
+#: .\templates\filemanager\index.html:34
+msgid "Create Directory"
+msgstr "创建目录"
+
+#: .\templates\filemanager\index.html:46
+msgid "Size"
+msgstr "大小"
+
+#: .\templates\filemanager\index.html:51
+msgid "Last Modified"
+msgstr "最后修改"
+
+#: .\templates\filemanager\index.html:68
+msgid "View File"
+msgstr "查看文件"
+
+#: .\templates\themes\beijing2008\base.html:82
+msgid "Feeds"
+msgstr "Feeds"
+
+#: .\templates\themes\beijing2008\base.html:88
+msgid "Menu"
+msgstr "Menu"
+
+#: .\templates\themes\beijing2008\base.html:92
+#: .\templates\themes\techicon\blog\list.html:9
+msgid "Latest Posts"
+msgstr "最新文章"
+
+#: .\templates\themes\beijing2008\base.html:105
+#: .\templates\themes\default\base.html:74
+#: .\templates\themes\naver\base.html:61
+#: .\templates\themes\techicon\base.html:102
+msgid "Archives"
+msgstr "存档"
+
+#: .\templates\themes\beijing2008\blog\list.html:11
+#: .\templates\themes\beijing2008\blog\page.html:14
+#: .\templates\themes\beijing2008\blog\post.html:14
+#: .\templates\themes\default\blog\list.html:21
+#: .\templates\themes\default\blog\page.html:20
+#: .\templates\themes\default\blog\post.html:20
+#: .\templates\themes\naver\blog\list.html:19
+#: .\templates\themes\naver\blog\page.html:25
+#: .\templates\themes\naver\blog\post.html:25
+#: .\templates\themes\techicon\blog\list.html:39
+#: .\templates\themes\techicon\blog\page.html:13
+#: .\templates\themes\techicon\blog\post.html:18 .\templates\wap\page.html:9
+#: .\templates\wap\post.html:10
+msgid "Views"
+msgstr "阅读"
+
+#: .\templates\themes\beijing2008\blog\page.html:36
+#: .\templates\themes\beijing2008\blog\post.html:38
+#: .\templates\themes\default\blog\page.html:44
+#: .\templates\themes\default\blog\post.html:54
+#: .\templates\themes\naver\blog\page.html:49
+#: .\templates\themes\naver\blog\post.html:49
+#: .\templates\themes\techicon\blog\page.html:38
+#: .\templates\themes\techicon\blog\post.html:48 .\templates\wap\page.html:28
+#: .\templates\wap\post.html:33
+msgid "Post at"
+msgstr "发表于"
+
+#: .\templates\themes\beijing2008\blog\post.html:27
+#: .\templates\themes\naver\blog\post.html:39
+#: .\templates\themes\techicon\blog\post.html:36
+msgid "Related"
+msgstr "相关文章"
+
+#: .\templates\themes\default\base.html:104
+msgid "Syndication"
+msgstr "聚合"
+
+#: .\templates\themes\default\base.html:119
+msgid "Pylogs Project"
+msgstr "Pylogs 项目"
+
+#: .\templates\themes\default\base.html:122
+msgid "Contact Me"
+msgstr "联系我"
+
+#: .\templates\themes\default\blog\list.html:28
+#: .\templates\themes\naver\blog\list.html:25
+msgid "No posts yet."
+msgstr "暂时没有文章"
+
+#: .\templates\themes\naver\base.html:44
+#: .\templates\themes\techicon\base.html:93
+msgid "Subscribe to my blog using RSS"
+msgstr "通过RSS订阅本站更新"
+
+#: .\templates\themes\techicon\blog\list.html:10
+msgid "Latest Comments"
+msgstr "最新评论"
+
+#: .\templates\themes\techicon\blog\list.html:11
+msgid "Popular Posts"
+msgstr "热门文章"
+
+#: .\templates\todo\index.html:11
+msgid "Projects in progress"
+msgstr "进行中的项目"
+
+#: .\templates\todo\index.html:14 .\templates\todo\index.html:57
+msgid "Created at"
+msgstr "创建于"
+
+#: .\templates\todo\index.html:15 .\templates\todo\index.html:58
+msgid "Public Project"
+msgstr "公共项目"
+
+#: .\templates\todo\index.html:15 .\templates\todo\index.html:44
+#: .\templates\todo\index.html:58
+msgid "Private Project"
+msgstr "私有项目"
+
+#: .\templates\todo\index.html:19
+msgid "This task is completed."
+msgstr "这个任务已完成"
+
+#: .\templates\todo\index.html:19 .\templates\todo\index.html:28
+msgid "Priority"
+msgstr "优先级"
+
+#: .\templates\todo\index.html:25
+msgid "Add New Task"
+msgstr "添加新任务"
+
+#: .\templates\todo\index.html:29
+msgid "low"
+msgstr "低"
+
+#: .\templates\todo\index.html:30
+msgid "medium"
+msgstr "中"
+
+#: .\templates\todo\index.html:31
+msgid "high"
+msgstr "高"
+
+#: .\templates\todo\index.html:42
+msgid "Add New Project"
+msgstr "添加新项目"
+
+#: .\templates\todo\index.html:52
+msgid "Completed Projects"
+msgstr "完成的项目"
+
+#: .\templates\todo\index.html:71
+msgid "No project is completed!"
+msgstr "没有已完成的项目"
+
+#: .\templates\wap\list.html:8
+msgid "Prev"
+msgstr "上一页"
+
+#: .\templates\wap\list.html:9
+msgid "Next"
+msgstr "下一页"
+
+#: .\templates\wap\tags\related_posts.html:7
+msgid "No related post now"
+msgstr "暂时没有文章"
+
+#~ msgid "No post now"
+#~ msgstr "暂时没有文章"
+
+#~ msgid "Upload successful,filename is %s"
+#~ msgstr "上传成功，文件名为 %s"
+
+#~ msgid "Create directory successful!"
+#~ msgstr "创建目录成功"
+
+#~ msgid "Sorry,create directory failed!"
+#~ msgstr "对不起，创建目录失败！"
+
+#~ msgid "Project Name"
+#~ msgstr "项目名称"
+
+#~ msgid "Created Date"
+#~ msgstr "建立日期"
+
+#~ msgid "LastUpdated Date"
+#~ msgstr "最后更新日期"
+
+#~ msgid "Project type"
+#~ msgstr "项目类别"
+
+#~ msgid "Project Description"
+#~ msgstr "项目描述"
+
+#~ msgid "Project task count"
+#~ msgstr "项目任务数"
+
+#~ msgid "Completed task count"
+#~ msgstr "完成的任务数"
+
+#~ msgid "Project slug"
+#~ msgstr "项目别名"
+
+#~ msgid "Todo Project"
+#~ msgstr "Todo项目"
+
+#~ msgid "Todo Projects"
+#~ msgstr "Todo项目"
+
+#~ msgid "Task Name"
+#~ msgstr "项目名称"
+
+#~ msgid "Task Project"
+#~ msgstr "任务所在项目"
+
+#~ msgid "Task Priority"
+#~ msgstr "任务优先级"
+
+#~ msgid "Is task completed"
+#~ msgstr "任务完成状态"
+
+#~ msgid "Todo Task"
+#~ msgstr "Todo任务"
+
+#~ msgid "Todo Tasks"
+#~ msgstr "Todo任务"
+
+#~ msgid "Pylogs: Latest Posts"
+#~ msgstr "Pylogs:最新文章"
+
+#~ msgid "logging your life..."
+#~ msgstr "logging your life..."
+
+#~ msgid "File type is not allowed!"
+#~ msgstr "不允许的文件类型！"

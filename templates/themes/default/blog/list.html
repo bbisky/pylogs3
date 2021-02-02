@@ -1,0 +1,36 @@
+{% load i18n themes posttags render%}
+{% theme_extends "base.html" %}
+{% block title %}{{pagetitle}} - {{ block.super }} {% endblock %}
+{% block content %} 
+{% if len(ol.object_list)>0 %}
+{% for post in ol.object_list %}
+                <div class="entry">
+      <h1>
+        <a href="{{post.get_absolute_url}}">{{post.title}}</a>
+      </h1>
+      <div class="byline">
+         {% translate "Pubdate" %}:{{post.pubdate|date:"Y-m-d H:i:s"}}
+      </div>
+      <div class="body">
+        <p>
+         {{post.content|markup:post.markup|safe|truncatewords_html:"20"}}
+        </p>
+      </div>
+      <div class="byline" style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 1em;">
+      <img title="Comments" height="16" src="{% media_url %}images/comment.gif" width="16" align="middle">
+        <a href="{{post.get_absolute_url}}#newcomments">{% trans "Comments" %}({{post.comment_count}})</a> | {{post.hits}} {% trans "Views" %}
+      </div>
+    </div>      
+{% endfor %}
+{% else %}
+<div class="entry">
+  <h1>
+     {% translate "No posts yet." %}
+  </h1>
+  </div>
+{%endif%}
+<!--Start of pagger-->
+{% paginator ol %}
+<!--End of pagger-->
+
+{% endblock %}

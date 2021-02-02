@@ -1,0 +1,22 @@
+{% load i18n themes posttags render%}
+{% theme_extends "base.html" %}
+{% block title %}{{pagetitle}} - {{ block.super }} {% endblock %}
+
+{% block content %}
+{% for post in ol.object_list %}
+<div class="content">
+<div class="post" id="post-11">
+<h1><a href="{{post.get_absolute_url}}" >{{post.title}}</a></h1></div>
+<div class="entry">Filed under: {% for cat in post.category.all %}<a href="{{cat.get_absolute_url}}">{{cat.name}}</a>{% if not forloop.last %}, {%endif%}{%endfor%}
+|<span class="comments"><a href="{{post.get_absolute_url}}#newcomments">{{post.comment_count}}{% trans "Comments" %} »</a></span> | {{post.hits}} {% trans "Views" %}</div>
+<div class="date">{% trans "Pubdate" %}: <span class="postdate">{{post.pubdate|date:"Y-m-d H:i:s"}}</span></div>
+<div class="mypost">
+{{post.content|markup:post.markup|safe|truncatewords_html:"20"}}
+</div>
+<div class="tag_tb"></div></div>
+    {% endfor %}
+<!--Start of pagger-->
+{% paginator ol %}
+<!--End of pagger-->
+{% endblock %}
+

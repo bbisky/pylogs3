@@ -1,0 +1,46 @@
+{% load i18n themes posttags render%}
+{% theme_extends "base.html" %}
+{% block title %}{{pagetitle}} - {{ block.super }} {% endblock %}
+<!-- Start of RECENT -->
+{% block recent %}
+{% if show_recent %}
+<div id="recent">
+<div id="titles">
+<div id="title1">{% trans "Latest Posts" %} »</div>
+<div id="title2">{% trans "Latest Comments" %} »</div>
+<div id="title3">{% trans "Popular Posts" %} »</div>
+</div>
+<div id="values">
+<div id="value1">
+  {% get_latest_posts %}
+</div>
+<div id="value2">{% get_latest_comments %}</div>
+<div id="value3">{% get_popular_posts %}</div>
+</div>
+</div>
+{% endif %}
+{% endblock %}
+<!-- End of RECENT -->
+{% block content %}
+{% for post in ol.object_list %}
+    <div class="post">
+      <h2>
+        <a href="{{post.get_absolute_url}}" >{{post.title}}</a>
+      </h2>
+    <small>{% trans "Pubdate" %}: <abbr title="post time">{{post.pubdate|date:"Y-m-d H:i:s"}}</abbr></small><br><br>
+
+      <div class="postbg">
+        <p>
+         {{post.content|markup:post.markup|safe|truncatewords_html:"20"}}
+        </p>
+      </div>
+    <br/>
+    <small><img title="Comments" height="16" src="{% media_url %}images/comment.gif" width="16" align="absmiddle">
+      <a href="{{post.get_absolute_url}}#newcomments">{% trans "Comments" %}({{post.comment_count}})</a> | {{post.hits}} {% trans "Views" %}</small><br>
+   </div>      
+    {% endfor %}    
+<!--Start of pagger-->
+{% paginator ol %}
+<!--End of pagger-->
+{% endblock %}
+
