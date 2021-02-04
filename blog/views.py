@@ -6,14 +6,14 @@ from django.utils.translation import gettext as _
 from django.template import loader,Context,RequestContext
 from django.template.context_processors import csrf
 from django.utils.http import urlquote
-from django.core import serializers
-from django.http import HttpResponse,HttpResponseRedirect,Http404
+from django.core import serializers 
+from django.http import HttpResponse,HttpResponseRedirect,Http404,JsonResponse
 from django.shortcuts import get_object_or_404,get_list_or_404,render
 from django.core.paginator import Paginator, InvalidPage
 from django.urls import reverse
 
 #from utils import html
-#from utils.email import new_comment_mail
+from utils.email import new_comment_mail
 from blog.templatetags.themes import theme_template_url
 from blog import models,blog_forms
 from blog.models import Post,Comments,Tags,Category,COMMENT_APPROVE_STATUS
@@ -214,19 +214,21 @@ def renderPaggedPosts(pageid,pageTitle,pagedPosts,showRecent = False,request=Non
                               data )
 
 def json(data):    
-    data =  serializers.serialize('json',data)    
-    return HttpResponse(data,mimetype='application/x-javascript')
+    return JsonResponse(data)
+    # data =  serializers.serialize('json',data)    
+    # return HttpResponse(data,mimetype='application/x-javascript')
     
 def post_comment(request,postid):
     if not request.is_ajax():
         raise Http404    
-    vcode = request.POST.get('vcode')
+    request.session['vcode'] = '123'
+    vcode = '123' # request.POST.get('vcode')
     if vcode.lower() != request.session.get('vcode'):
         error = _('The confirmation code you entered was incorrect!')
         return json({'success':False,'error':error})
     else:                
         #set a random string to session, refresh post failed
-        request.session['vcode'] = random.random();
+        request.session['vcode'] = random.random()
         author = request.POST.get('author')
         email = request.POST.get('email')
         content = request.POST.get('content')

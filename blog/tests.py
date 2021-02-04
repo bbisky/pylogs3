@@ -1,11 +1,11 @@
 import unittest
 
 from datetime import datetime
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.test.testcases import TestCase
 from django.test.client import Client
 
-from models import Tags, Category, Comments, Post, Links,POST_TYPES,POST_STATUS,COMMENT_APPROVE_STATUS,POST_COMMENT_STATUS
+from .models import Tags, Category, Comments, Post, Links,POST_TYPES,POST_STATUS,COMMENT_APPROVE_STATUS,POST_COMMENT_STATUS
 
 class ModelTest(TestCase):
     def setUp(self):

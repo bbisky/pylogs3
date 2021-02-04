@@ -5,6 +5,22 @@ function reload_verifycode(oVerifycode) {
         oVerifycode.src = "/utils/vcode/?date=" + now.getTime(); 
     }
 }
+function getCookie(name) {
+  let cookieValue = null;
+  if (document.cookie && document.cookie !== '') {
+      const cookies = document.cookie.split(';');
+      for (let i = 0; i < cookies.length; i++) {
+          const cookie = cookies[i].trim();
+          // Does this cookie string begin with the name we want?
+          if (cookie.substring(0, name.length + 1) === (name + '=')) {
+              cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+              break;
+          }
+      }
+  }
+  return cookieValue;
+}
+const csrftoken = getCookie('csrftoken');
 function post_comment(){
   var btn = ':button.button';
   $(btn).attr('disabled',true);   
@@ -12,7 +28,9 @@ function post_comment(){
   var  author_email=$.trim($('#id_comment_author_email').val());
   var  author_url=$.trim($('#id_comment_author_url').val());
   var  content=$.trim($('#id_comment_content').val());
-  var  vcode=$.trim($('#id_comment_vcode').val());
+
+  var needVCode = $('#id_comment_vcode').length >0;
+ 
   var validated = true;
   if(author == "")
   {
@@ -47,16 +65,19 @@ function post_comment(){
   } else
   {
      $('#id_comment_content').css('border',"");
-  }
-  if(vcode == "")
-  {
-       input_error('#id_comment_vcode');
-       validated = false;
-  }
-   else
-  {
-     $('#id_comment_vcode').css('border',"");
-  }
+  } 
+  if(needVCode){
+    var  vcode=$.trim($('#id_comment_vcode').val());
+    if(vcode == "")
+    {
+        input_error('#id_comment_vcode');
+        validated = false;
+    }
+    else
+    {
+      $('#id_comment_vcode').css('border',"");
+    }
+}
   
   if(!validated){
     $(btn).attr('disabled',false);    
@@ -73,6 +94,7 @@ function post_comment(){
               vcode:vcode
               },
        dataType: "json",
+       headers: {"X-CSRFToken": csrftoken },
        success: function(j){
             if(j.success){
                     alert(j.success)

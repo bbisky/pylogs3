@@ -15,6 +15,8 @@ from blog.models import Post
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('feeds/rss/', feeds.RssLatestPosts(), name='rss'),
+    path('feeds/atom/', feeds.AtomLatestPosts(), name='atom'),
     #tags
     path(r'tags/',views.tags,name='tags'),
     re_path(r'^tags/(?P<tagname>.*)/$',views.tags,name='tagname'),                        
@@ -28,8 +30,7 @@ urlpatterns = [
     re_path(r'^(?P<year>\d{4})/(?P<month>(\d{1,2})?)/?(?P<date>(\d{1,2})?)/?$',views.dateposts),
     re_path(r'^(?P<pagename>\w+)/$',views.page,name='page'),
     re_path(r'^(.+?)(?P<pagename>\w+)/$',views.page,name='page'),   
-    path('feeds/rss/', feeds.RssLatestPosts(), name='rss'),
-    path('feeds/atom/', feeds.AtomLatestPosts(), name='atom'),
+   
     #re_path(r'^feeds/(?P<url>\w+)/$',Feed, {'feed_dict':feed_dict},name='feeds'),
     #path(r'^rpc/$',blog.rpc.call,name='rpc'),
 ]

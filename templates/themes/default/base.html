@@ -8,7 +8,7 @@
 <meta name="keywords" content="{%site_keywords%}"/>
 <meta name="description" content="{%site_description%}"/>
 {%endblock%}
-<script type="text/javascript" src="{% media_url %}js/jquery.pack.js"></script>
+<script type="text/javascript" src="{% media_url %}js/jquery.min.js"></script>
     <script type="text/javascript" src="{% media_url %}js/highslide.packed.js"></script>
     <link rel="stylesheet" href="{% theme_media_url %}css/screen.css" type="text/css" media="screen"/>
     <link rel="stylesheet" href="{% media_url %}css/highslide.css" type="text/css" media="screen"/>
@@ -31,9 +31,9 @@ _media_root = '{%media_url%}';
           <div style="margin-left: 2em">
             <ul>
               <li class="head_mob">
-                <a href="http://code.google.com/p/pylogs/" style="color:#ff9900; font-weight:bold;">Pylogs <sup>{% get_version %}</sup></a>
+                <a href="https://github.com/bbisky/Pylogs" style="color:#ff9900; font-weight:bold;">Pylogs <sup>{% get_version %}</sup></a>
               </li>
-              <li class="head_phone">March 5,2008
+              <li class="head_phone">2020
               </li>
               <li>&nbsp;</li>
               <li>&nbsp;</li>
@@ -116,7 +116,7 @@ _media_root = '{%media_url%}';
         <div id="footmenu">
           <ul>
             <li>
-              <a href="http://code.google.com/p/pylogs/"> {% trans "Pylogs Project" %}</a>
+              <a href="https://github.com/bbisky/Pylogs"> {% trans "Pylogs Project" %}</a>
             </li>           
             <li class="last">
               <a href="mailto:denghaibo+pylogs@gmail.com"> {% trans "Contact Me" %}</a>
@@ -124,7 +124,7 @@ _media_root = '{%media_url%}';
           </ul>
         </div>
         <div id="copyright">
-         Powered by  <a href="http://code.google.com/p/pylogs/">Pylogs</a> <sup style="color:#f0f;">{% get_version %}</sup>.<br>
+         Powered by  <a href="https://github.com/bbisky/Pylogs">Pylogs</a> <sup style="color:#f0f;">{% get_version %}</sup>.<br>
           Copyright &copy; 2008-2010 Sky<br>          
           All rights reserved.
         </div>

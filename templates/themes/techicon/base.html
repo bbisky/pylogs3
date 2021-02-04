@@ -1,18 +1,19 @@
 {% load i18n posttags menu links themes config %}
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>{% block title %}{%site_name%}-{%site_subtitle%}{% endblock %}</title>
 {%block meta %}
 <meta content="{%site_keywords%}" name="keywords"/>
 <meta name="description" content="{%site_description%}"/>{%endblock%}
-<script type="text/javascript" src="{%media_url%}js/jquery.pack.js"></script>
+<script type="text/javascript" src="{%media_url%}js/jquery.min.js"></script>
 <script type="text/javascript" src="{%media_url%}js/highslide.packed.js"></script>
-<link rel="stylesheet" href="{% theme_media_url %}/css/style.css" type="text/css" media="screen"/>
+<link rel="shortcut icon" href="{%media_url%}images/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="{% theme_media_url %}css/style.css" type="text/css" media="screen"/>
 <link rel="stylesheet" href="{%media_url%}css/highslide.css" type="text/css" media="screen"/>
-<link rel="alternate" type="application/rss+xml" title="{%site_name%} Rss Feed" href='{% url feeds url="rss" %}'/>
-<link rel="alternate" type="application/rss+xml" title="{%site_name%} Atom Feed" href='{% url feeds url="atom" %}'/>
+<link rel="alternate" type="application/rss+xml" title="{%site_name%} Rss Feed" href='{% url  "rss" %}'/>
+<link rel="alternate" type="application/rss+xml" title="{%site_name%} Atom Feed" href='{% url  "atom" %}'/>
 {% block script %}{% endblock %}
 <script type="text/javascript" language="javascript">
 //for syntax highlight
@@ -26,7 +27,7 @@ _media_root = '{%media_url%}';
 <div id="topbar">
 <div id="topbarright">
     <div id="topsearch">
-    <!-- SiteSearch Google -->
+    <!-- SiteSearch Google 
         <form method="get" style="margin:0; padding:0; margin-top:-3px;" action="http://www.google.cn/custom" target="google_window">
         <input type="text" name="q" maxlength="255" value="Search..." id="sbi" onfocus="if (this.value == 'Search...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search...';}" class="swap_value" ></input>
         <table border="0" style="display:none;" >
@@ -58,7 +59,7 @@ _media_root = '{%media_url%}';
         <input type="hidden" name="hl" value="zh-CN"></input>
         </td></tr></table>
         </form>
-    <!-- SiteSearch Google -->
+     SiteSearch Google -->
     </div>
 </div>
 <div id="topbarleft">
@@ -90,7 +91,7 @@ _media_root = '{%media_url%}';
     {% block sidebar %}
     <div id="subscribe">
         <img src="{% theme_media_url %}/images/feed.png" style="padding-right: 10px;" alt="FEED" align="left">
-            <a href='{% url feeds url="rss" %}' title='{% trans "Subscribe to my blog using RSS" %}'><b>{% trans "Subscribe to my blog using RSS" %}</b></a>
+            <a href='{% url  "rss" %}' title='{% trans "Subscribe to my blog using RSS" %}'><b>{% trans "Subscribe to my blog using RSS" %}</b></a>
     </div>
     <div id="sidebar1">
         <ul>	
@@ -129,6 +130,6 @@ _media_root = '{%media_url%}';
 
 <br clear="all">
 <div id="footer">
-Powered by <a href="http://code.google.com/p/pylogs/" style="color:#ff9900; font-weight:bold;" >Pylogs</a><sup>{% get_version %}</sup>
+Powered by <a href="https://github.com/bbisky/Pylogs" style="color:#ff9900; font-weight:bold;" >Pylogs</a><sup>{% get_version %}</sup>
 </div></div>
 </body></html>

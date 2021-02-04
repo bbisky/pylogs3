@@ -18,7 +18,7 @@ from django.urls import include, path
 from blog.views import index
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('sky/', admin.site.urls),
     path('todo/',include('todo.urls')), 
 	path('', include('blog.urls')),    
     

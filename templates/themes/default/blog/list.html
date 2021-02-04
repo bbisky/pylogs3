@@ -2,7 +2,7 @@
 {% theme_extends "base.html" %}
 {% block title %}{{pagetitle}} - {{ block.super }} {% endblock %}
 {% block content %} 
-{% if len(ol.object_list)>0 %}
+{% if ol.object_list|length > 0 %}
 {% for post in ol.object_list %}
                 <div class="entry">
       <h1>

@@ -3,7 +3,8 @@ from django.template import Library
 from django.conf import settings
 from django.db.models.signals import post_save
 
-from utils.version import get_svn_revision
+
+from utils.version import get_runtime_revision
 from blog.models import Setting
 
 register = Library()
@@ -16,7 +17,7 @@ def get_version():
     """
     v = '.'.join([str(i) for i in VERSION[:-1]])
     if VERSION[-1]: 	   
-        v = '%s%s %s' % (v, VERSION[-1],get_svn_revision())
+        v = '%s%s (%s)' % (v, VERSION[-1], get_runtime_revision())
     return v
 
 def site_name():
@@ -62,7 +63,7 @@ def site_description():
     if desc:
         return desc
     else:
-        return 'Pylogs is a Django based blog system,project page:http://code.google.com/p/pylogs,demo site:http://oteam.cn Simple is beautiful...'
+        return 'Pylogs is a Django based blog system,project page:https://github.com/bbisky/Pylogs,demo site:http://oteam.cn Simple is beautiful...'
         
 def site_keywords():
     '''

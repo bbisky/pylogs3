@@ -1,5 +1,5 @@
 #coding=utf-8
-from urllib.parse import urlparse
+from urllib.parse import urljoin
 
 from django.utils.translation import gettext as _
 from django.core.exceptions import ObjectDoesNotExist
@@ -46,7 +46,7 @@ class RssLatestPosts(Feed):
         return author_name()
     
     def item_link(self, item):      
-        return urlparse.urljoin(domain, item.get_absolute_url())       
+        return urljoin(domain, item.get_absolute_url())       
     
     def item_pubdate(self, item):
         return item.pubdate
@@ -75,7 +75,7 @@ class AtomLatestPosts(Feed):
         return author_name()   
     
     def item_link(self, item):        
-        return  urlparse.urljoin(domain, item.get_absolute_url())
+        return  urljoin(domain, item.get_absolute_url())
     
     def item_pubdate(self, item):
         return item.pubdate

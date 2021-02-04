@@ -130,4 +130,4 @@ STATICFILES_DIRS = [
 ]
 #MEDIA_URL = '/media/'
 STATIC_URL = '/media/'
-VERSION = (1, 16, 'beta')	
+VERSION = (3, 10, 'dev')	

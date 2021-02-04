@@ -110,7 +110,7 @@ class Post(models.Model):
     #add markup field sql: ALTER TABLE blog_post ADD `markup` VARCHAR(64) NOT NULL DEFAULT 'html';
     markup = models.CharField(_('Markup'),max_length=64,choices=MARKUP_LANGUAGE_CHOICES,default="html")  
     content = models.TextField(_('Content'))
-    category = models.ManyToManyField(Category,null=True,blank=True,
+    category = models.ManyToManyField(Category,blank=True,
                                       verbose_name=_('Category'))
     post_name = models.CharField(_('Post name'),max_length=255,unique=True,
                                  blank=True,help_text=_('Use as url'))
@@ -130,7 +130,7 @@ class Post(models.Model):
                                       default= POST_COMMENT_STATUS[0][0],
                                       max_length=10,choices = POST_COMMENT_STATUS)
     comment_count = models.IntegerField(_('Comment count'),default=0,editable=False)
-    tags = models.ManyToManyField(Tags,null=True,blank=True,
+    tags = models.ManyToManyField(Tags, blank=True,
                                   verbose_name=_('Tags'),related_name='post_set')
     
     def save(self,*args, **kwargs):
